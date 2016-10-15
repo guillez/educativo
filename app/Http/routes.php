@@ -21,10 +21,16 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 	Route::get('/home', 'HomeController@index');
 
 	Route::get('bancos/data', 'BancosController@anyData')->name('bancos.data');
-    Route::get('bancos/index', 'BancosController@index');
 	Route::resource('bancos', 'BancosController');
 
+	// Rutas Paises
+	Route::resource('paises', 'PaisesController');
+	// Rutas Provincias
+	Route::get('provincias/{id}','PaisesController@getProvincias');
+	// Rutas Ciudades
+	Route::get('ciudades/{id}','ProvinciasController@getCiudades');
 
+	Route::resource('personas', 'PersonasController');
 
 	Route::get('proveedores/data', 'ProveedoresController@anyData')->name('proveedores.data');
     Route::get('proveedores/index', 'ProveedoresController@index');

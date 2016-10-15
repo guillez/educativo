@@ -18,5 +18,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'ingguillermoz@gmail.com',
             'password' =>  bcrypt('ucu522')
         ]);
+
+
+        $this->call('PaisesTableSeeder');
+        $this->call('ProvinciasTableSeeder');
+        $this->call('CiudadesTableSeeder');
+
     }
 }

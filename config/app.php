@@ -160,6 +160,12 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
 
+        /*para generador*/
+
+
+        Mitul\Generator\GeneratorServiceProvider::class,
+
+
     ],
 
     /*
@@ -210,6 +216,9 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,     
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,  
         'Datatables' => Yajra\Datatables\Datatables::class, 
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Flash'     => Laracasts\Flash\Flash::class
 
     ],
 

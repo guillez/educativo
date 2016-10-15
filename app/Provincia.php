@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Educativo;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +13,11 @@ class Provincia extends Model
 
     public function pais()
     {
-        return $this->hasOne('App\Pais');
-    }        
+        return $this->hasOne('Educativo\Pais');
+    }      
+
+    public static function provincias($id){
+    	return Provincia::where('fk_pais_id','=',$id)
+    	->get();
+    }  
 }
